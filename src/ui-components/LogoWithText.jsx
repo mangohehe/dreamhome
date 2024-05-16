@@ -16,12 +16,12 @@ export default function LogoWithText(props) {
   const { overrides: overridesProp, ...rest } = props;
   const variants = [
     {
-      overrides: { "Chip Nexus": {}, Union: {}, logo: {}, LogoWithText: {} },
+      overrides: { "MSC": {}, Union: {}, logo: {}, LogoWithText: {} },
       variantValues: { color: "neutral" },
     },
     {
       overrides: {
-        "Chip Nexus": {},
+        "MSC": {},
         Union: {
           paths: [
             {
@@ -62,7 +62,7 @@ export default function LogoWithText(props) {
       <Flex
         gap="10px"
         direction="row"
-        width="139px"
+        width="39px"
         height="unset"
         justifyContent="space-between"
         alignItems="center"
@@ -104,7 +104,7 @@ export default function LogoWithText(props) {
         ></Icon>
         <Text
           fontFamily="Kameron"
-          fontSize="16px"
+          fontSize="26px"
           fontWeight="400"
           color="rgba(0,0,0,1)"
           lineHeight="24px"
@@ -120,8 +120,8 @@ export default function LogoWithText(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Chip Nexus"
-          {...getOverrideProps(overrides, "Chip Nexus")}
+          children="MSC"
+          {...getOverrideProps(overrides, "MSC")}
         ></Text>
       </Flex>
     </View>
