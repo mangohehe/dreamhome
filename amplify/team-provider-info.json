@@ -1,0 +1,50 @@
+{
+  "mahala": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-nexus-mahala-221317-authRole",
+      "UnauthRoleArn": "arn:aws:iam::366960744300:role/amplify-nexus-mahala-221317-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::366960744300:role/amplify-nexus-mahala-221317-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-nexus-mahala-221317-deployment",
+      "UnauthRoleName": "amplify-nexus-mahala-221317-unauthRole",
+      "StackName": "amplify-nexus-mahala-221317",
+      "StackId": "arn:aws:cloudformation:us-east-1:366960744300:stack/amplify-nexus-mahala-221317/c84fa070-b64e-11ee-86ee-0a3958e6e1cf",
+      "AmplifyAppId": "d2bmyt953uqtxt"
+    },
+    "categories": {
+      "api": {
+        "nexus": {}
+      },
+      "auth": {
+        "SemiGptchipnexusamplifyfe": {}
+      },
+      "storage": {
+        "s3semigptchipnexusarxivpaper01": {}
+      }
+    }
+  },
+  "dhdev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-semigptchipnexusampl-dhdev-234503-authRole",
+      "UnauthRoleArn": "arn:aws:iam::366960744300:role/amplify-semigptchipnexusampl-dhdev-234503-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::366960744300:role/amplify-semigptchipnexusampl-dhdev-234503-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-semigptchipnexusampl-dhdev-234503-deployment",
+      "UnauthRoleName": "amplify-semigptchipnexusampl-dhdev-234503-unauthRole",
+      "StackName": "amplify-semigptchipnexusampl-dhdev-234503",
+      "StackId": "arn:aws:cloudformation:us-west-1:366960744300:stack/amplify-semigptchipnexusampl-dhdev-234503/d3e1cef0-134f-11ef-b2e9-02fa218c8efb",
+      "AmplifyAppId": "d9cwbxetdmpvf"
+    },
+    "categories": {
+      "auth": {
+        "SemiGptchipnexusamplifyfe": {}
+      },
+      "api": {
+        "nexus": {}
+      },
+      "storage": {
+        "s3semigptchipnexusarxivpaper01": {}
+      }
+    }
+  }
+}

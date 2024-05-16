@@ -1,0 +1,35 @@
+type Researches @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String
+  latest_update_date: String
+  authors: String
+  institutions: String
+  abstraction: String
+  summary: String
+  categories: String
+  doi: String
+  createdAt: AWSDate
+  updatedAt: AWSDate
+}
+
+type News @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String!
+  publish_date: String
+  publisher: String
+  summary: String
+  url: AWSURL
+  language: String
+  thumbnail: AWSURL
+  createdAt: AWSDate
+  updatedAt: AWSDate
+  translatedTitle: String
+  translatedSummary: String
+}
+
+type ModelNewsConnection {
+  items: [News]
+  nextToken: String
+  totalCount: Int
+}
+ 

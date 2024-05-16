@@ -1,0 +1,16 @@
+{
+  "resourceName": "s3semigptchipnexusarxivpaper01",
+  "bucketName": "semigpt-chip-nexus-arxiv-paper-01",
+  "policyUUID": "a3a69d91",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "DELETE",
+    "READ",
+    "CREATE_AND_UPDATE"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}
