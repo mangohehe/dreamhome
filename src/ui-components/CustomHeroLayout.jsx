@@ -1,125 +1,79 @@
-/***************************************************************************
- * The contents of this file were generated with Amplify Studio.           *
- * Please refrain from making any modifications to this file.              *
- * Any changes to this file will be overwritten when running amplify pull. *
- **************************************************************************/
-
-/* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "./utils";
 import { Button, Flex, Text } from "@aws-amplify/ui-react";
-import HeroFeatureList from "./HeroFeatureList";
+import './styles/CustomHeroLayout.css'; // Import the CSS file
+
 export default function CustomHeroLayout(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
+      className="custom-hero-layout"
+      style={{ backgroundImage: `url('http://127.0.0.1:5500/public/imgs/dreamhome.jpeg')` }} // Relative path for the background image
       gap="0"
       direction="row"
-      width="1728px"
-      height="unset"
+      width="100%"
+      height="unset"  // Ensure the component takes the full height
       justifyContent="center"
       alignItems="center"
       position="relative"
-      padding="0px 0px 0px 0px"
-      backgroundColor="rgba(0,0,0,1)"
+      padding="0px"
       {...getOverrideProps(overrides, "CustomHeroLayout")}
       {...rest}
     >
       <Flex
+        className="left"
         gap="30px"
         direction="column"
-        width="874px"
+        width="50%"
         height="unset"
         justifyContent="center"
-        alignItems="flex-start"
+        alignItems="center" /* Center items horizontally */
         overflow="hidden"
-        shrink="0"
-        alignSelf="stretch"
         position="relative"
         padding="80px 50px 33px 80px"
-        backgroundColor="rgba(0,0,0,1)"
         {...getOverrideProps(overrides, "Left")}
       >
         <Flex
+          className="hero-message"
           gap="0"
           direction="column"
           width="unset"
           height="unset"
           justifyContent="center"
-          alignItems="flex-start"
-          shrink="0"
+          alignItems="center" /* Center items horizontally */
           position="relative"
-          padding="0px 0px 0px 0px"
+          padding="0px"
           {...getOverrideProps(overrides, "HeroMessage")}
         >
           <Text
+            className="heading"
             fontFamily="Inter"
-            fontSize="43px"
+            fontSize="30px"
             fontWeight="400"
             color="rgba(230,238,254,1)"
             lineHeight="50px"
-            textAlign="left"
+            textAlign="center"
             display="block"
-            direction="column"
-            justifyContent="unset"
-            width="unset"
-            height="221px"
-            gap="unset"
-            alignItems="unset"
-            shrink="0"
-            alignSelf="stretch"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Your Gateway to Semiconductor and  &#xA;IC Design Innovations"
-            {...getOverrideProps(overrides, "Heading")}
-          ></Text>
-          <Text
-            fontFamily="Inter"
-            fontSize="24px"
-            fontWeight="700"
-            color="rgba(230,238,254,1)"
-            lineHeight="24px"
-            textAlign="left"
-            display="block"
-            direction="column"
-            justifyContent="unset"
             width="unset"
             height="unset"
-            gap="unset"
-            alignItems="unset"
-            shrink="0"
-            alignSelf="stretch"
-            position="relative"
-            padding="0px 0px 0px 0px"
+            padding="0px"
             whiteSpace="pre-wrap"
-            children="All-In-One AI Based IC  Design Platform"
-            {...getOverrideProps(overrides, "Body")}
-          ></Text>
+            children="YOUR DREAM HOME &#xA; AWAITS YOU"
+            {...getOverrideProps(overrides, "Heading")}
+          />
         </Flex>
         <Button
-          colorTheme="info" color="white"
-          size="large"
+          className="button"
+          colorTheme="info" 
+          color="white"
+          justifyContent="center"
+          size="medium"
           loadingText=""
           onClick={() => window.location.href = 'https://fe.d3a7f3vn13kcxk.amplifyapp.com/'}
         >
-          🚀   Try Free
+          GET FREE BUILD CONSULTATION
         </Button>
       </Flex>
-      <HeroFeatureList
-        display="flex"
-        gap="50px"
-        direction="column"
-        width="726px"
-        height="531px"
-        justifyContent="center"
-        alignItems="center"
-        shrink="0"
-        position="relative"
-        padding="0px 0px 0px 0px"
-        backgroundColor="rgba(0,0,0,1)"
-        {...getOverrideProps(overrides, "HeroFeatureList")}
-      ></HeroFeatureList>
     </Flex>
   );
 }

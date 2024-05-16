@@ -15,5 +15,4 @@ export { default as MarketingFooter } from "./MarketingFooter";
 export { default as NavBarHeader } from "./NavBarHeader";
 export { default as NewsCreateForm } from "./NewsCreateForm";
 export { default as SocialPostCollection } from "./SocialPostCollection";
-export { default as MessageBar } from "./MessageBar"
 2
