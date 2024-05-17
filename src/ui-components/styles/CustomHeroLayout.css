@@ -1,79 +1,79 @@
-/* CustomHeroLayout.css */
+:root {
+  --bg-overlay-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background overlay */
+  --text-color: rgba(230, 238, 254, 1); /* Light bluish text color */
+  --font-family: 'Inter', sans-serif; /* Common font family */
+  --heading-font-size-large: 35px;
+  --heading-font-size-small: 28px;
+  --heading-line-height-large: 50px;
+  --heading-line-height-small: 40px;
+}
 
 .custom-hero-layout {
-    position: relative; /* Set this once correctly */
-    padding: 0 20px;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1; /* Lower than NavBarHeader */
+  position: relative;
+  padding: 0 20px;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.custom-hero-layout .hero-content {
+  gap: 30px;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: visible;
+  position: relative;
+  padding: 80px 50px 33px 80px;
+  background-color: var(--bg-overlay-color);
+}
+
+.custom-hero-layout .hero-message {
+  gap: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  padding: 0px;
+}
+
+.custom-hero-layout .hero-message .heading {
+  font-family: var(--font-family);
+  font-size: var(--heading-font-size-large);
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: var(--heading-line-height-large);
+  text-align: center;
+  display: block;
+}
+
+.custom-hero-layout .hero-message .button {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .custom-hero-layout {
+      flex-direction: column;
   }
-  
-  .custom-hero-layout .left {
-    gap: 30px;
+
+  .custom-hero-layout .hero-content {
+    display: flex;
     flex-direction: column;
     width: 50%;
-    height: unset;
-    justify-content: center;
-    align-items: flex-start;
-    overflow: visible;
-    position: relative;
+    align-items: center; /* Ensure that all children are centered horizontally */
+    justify-content: center; /* Vertically center the contents */
     padding: 80px 50px 33px 80px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    background-color: rgba(0, 0, 0, 0.5); /* For better text readability */
   }
-  
-  .custom-hero-layout .hero-message {
-    gap: 0;
-    flex-direction: column;
-    width: unset;
-    height: unset;
-    justify-content: center;
-    align-items: flex-start;
-    position: relative;
-    padding: 0px;
-  }
-  
+
   .custom-hero-layout .hero-message .heading {
-    font-family: Inter, sans-serif; /* Ensure Inter font is included, or provide a fallback */
-    font-size: 35px;
-    font-weight: 400;
-    color: rgba(230, 238, 254, 1);
-    line-height: 50px;
-    text-align: center;
-    display: block;
-    width: unset;
-    height: unset;
-    padding: 0px;
-    white-space: pre-wrap;
+      font-size: var(--heading-font-size-small);
+      line-height: var(--heading-line-height-small);
   }
-  
-  .custom-hero-layout .hero-message .button {
-    margin-top: 20px;
-    width: 100%;
-    max-width: 300px; /* Limit the max width */
-  }
-  
-  @media (max-width: 768px) {
-    .custom-hero-layout {
-      flex-direction: column; /* Stack items vertically on small screens */
-    }
-  
-    .custom-hero-layout .left {
-      width: 100%;
-      padding: 80px 50px 33px 80px; /* Ensure these paddings don't push content unexpectedly */
-    }
-  
-    .custom-hero-layout .hero-message .heading {
-      font-size: 28px; /* Adjust font size for smaller screens */
-      line-height: 40px;
-    }
-  
-    .custom-hero-layout .hero-message .button {
-      max-width: 100%; /* Ensure the button takes full width */
-      font-size: 16px; /* Adjust font size for smaller screens */
-    }
-  }
-  
+}

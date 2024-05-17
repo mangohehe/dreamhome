@@ -2,17 +2,18 @@ import * as React from "react";
 import { getOverrideProps } from "./utils";
 import { Button, Flex, Text } from "@aws-amplify/ui-react";
 import './styles/CustomHeroLayout.css'; // Import the CSS file
+import buttonStyles from './styles/Button.module.css'; // Import the CSS file
 
 export default function CustomHeroLayout(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
       className="custom-hero-layout"
-      style={{ backgroundImage: `url('http://127.0.0.1:5500/public/imgs/dreamhome.jpeg')` }} // Relative path for the background image
+      style={{ backgroundImage: `url('http://127.0.0.1:5500/public/imgs/dreamhome.jpeg')` }}
       gap="0"
       direction="row"
       width="100%"
-      height="unset"  // Ensure the component takes the full height
+      height="unset"
       justifyContent="center"
       alignItems="center"
       position="relative"
@@ -21,59 +22,40 @@ export default function CustomHeroLayout(props) {
       {...rest}
     >
       <Flex
-        className="left"
-        gap="30px"
+        className="hero-content"
+        gap="50px"  // Increased from 30px to provide more space between elements
         direction="column"
         width="50%"
         height="unset"
         justifyContent="center"
-        alignItems="center" /* Center items horizontally */
+        alignItems="center"
         overflow="hidden"
         position="relative"
         padding="80px 50px 33px 80px"
-        {...getOverrideProps(overrides, "Left")}
+        {...getOverrideProps(overrides, "HeroContent")}
       >
-        <Flex
-          className="hero-message"
-          gap="0"
-          direction="column"
-          width="unset"
-          height="unset"
-          justifyContent="center"
-          alignItems="center" /* Center items horizontally */
-          position="relative"
-          padding="0px"
-          {...getOverrideProps(overrides, "HeroMessage")}
-        >
-          <Text
-            className="heading"
-            fontFamily="Inter"
-            fontSize="30px"
-            fontWeight="400"
-            color="rgba(230,238,254,1)"
-            lineHeight="50px"
-            textAlign="center"
-            display="block"
-            width="unset"
-            height="unset"
-            padding="0px"
-            whiteSpace="pre-wrap"
-            children="YOUR DREAM HOME &#xA; AWAITS YOU"
-            {...getOverrideProps(overrides, "Heading")}
-          />
-        </Flex>
+        <Text
+          className="heading"
+          fontFamily="Inter"
+          fontSize="35px"
+          fontWeight="400"
+          color="rgba(230, 238, 254, 1)"
+          lineHeight="50px"
+          textAlign="center"
+          display="block"
+          {...getOverrideProps(overrides, "Heading")}
+          children="YOUR DREAM HOME &#xA; AWAITS YOU"
+        />
         <Button
-          className="button"
-          colorTheme="info" 
-          color="white"
-          justifyContent="center"
-          size="medium"
-          loadingText=""
+          className={buttonStyles.herolayout_button}
+          style={{ marginTop: '50px' }}  // Adds margin top directly inline for one-time adjustments
+          alignContent="center"  // Corrected from {alignContent} to "center"
           onClick={() => window.location.href = 'https://fe.d3a7f3vn13kcxk.amplifyapp.com/'}
         >
           GET FREE BUILD CONSULTATION
         </Button>
       </Flex>
+
     </Flex>
   );
 }

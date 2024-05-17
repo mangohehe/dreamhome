@@ -99,8 +99,8 @@ export default function NavBarHeader(props) {
       </Flex>
 
       <Flex
-        gap="8px"
         direction="row"
+        gap="8px"
         width="auto"
         height="unset"
         justifyContent="center"
@@ -123,8 +123,8 @@ export default function NavBarHeader(props) {
           color="rgba(255,0,0,1)"
           lineHeight="24px"
           textAlign="left"
-          display="block"
-          direction="column"
+          display="inline" // Changed from block to inline
+          // Removed direction property as it's not applicable here
           justifyContent="unset"
           width="unset"
           height="unset"

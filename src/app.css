@@ -1,8 +1,0 @@
-/* main.css or another appropriate CSS file */
-.container {
-    width: 100%;
-    max-width: 100%; /* Prevents the container from extending beyond the viewport width */
-    box-sizing: border-box; /* Includes padding and borders in the element's total width and height */
-    padding: 0 0px; /* Optional: adds padding inside the container */
-    margin: 0 auto; /* Centers the container in the viewport */
-}

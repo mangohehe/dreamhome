@@ -2,8 +2,10 @@
 
 /* .header_button */
 .header_button {
-    background-color: #ffffff; /* white background */
-    color: #333; /* dark grey text for visibility */
+    background-color: #ffffff;
+    /* white background */
+    color: #333;
+    /* dark grey text for visibility */
     border: none;
     padding: 12px 24px;
     border-radius: 4px;
@@ -12,21 +14,52 @@
 }
 
 .header_button:hover {
-    background-color: #bec0e7; /* light purple background on hover */
+    background-color: #bec0e7;
+    /* light purple background on hover */
 }
 
 /* Button.module.css */
 .header_highlighted_button {
-    background-color: #5b55b1; /* Dark blue background */
+    background-color: #5b55b1;
+    /* Dark blue background */
     color: white;
     border: none;
     padding: 12px 24px;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold; 
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .header_highlighted_button:hover {
-    background-color: #4742a8; /* Slightly darker shade for hover */
-    transform: scale(1.05); /* Slight scale to give feedback */
+    background-color: #4742a8;
+    /* Slightly darker shade for hover */
+    transform: scale(1.05);
+    /* Slight scale to give feedback */
 }
+
+/* HeroLayout*/
+.herolayout_button {
+    background-color: rgba(241, 224, 107, 0.7); /* Semi-transparent yellow */
+    color: #FFFFFF; /* Bold and vivid white text color for maximum contrast */
+    font-family: 'Inter', sans-serif; /* Stylish and readable font */
+    font-size: 16px; /* Suitable font size for readability */
+    font-weight: bold; 
+    padding: 24px 24px; /* Adequate padding for button content */
+    border-radius: 20px; /* Curved borders for a modern look */
+    border: none; /* No borders for a cleaner appearance */
+    cursor: pointer; /* Cursor indicates button is clickable */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 4px rgba(0, 123, 255, 0.3); /* Subtle shadow for depth */
+    text-align: center; /* Ensures text is centered */
+    display: inline-block; /* Allows setting dimensions */
+    text-decoration: none; /* Removes underline from links styled as buttons */
+}
+
+.herolayout_button:hover {
+    background: rgba(74, 88, 10, 0.3); /* Slightly more opaque background on hover */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle inner shadow on hover */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Faint text shadow on hover */
+}
+
+  
