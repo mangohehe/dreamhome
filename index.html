@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
-    <title>Frond-end Implemented with Amplify </title>
+    <title>Front-end Implemented with Amplify</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-      @import url("https://fonts.googleapis.com/css?family=DM+Sans:500,700,400|Poppins:500|Roboto:400,700|Domine:400");
+        @import url("https://fonts.googleapis.com/css?family=DM+Sans:500,700,400|Poppins:500|Roboto:400,700|Domine:400");
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+        
+        /* Apply box-sizing globally */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Ensuring the html and body take full width and height of the viewport */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden; /* Prevent horizontal scrollbar */
+        }
+
+        /* Generic focus styles for accessibility */
+        button:focus-visible, a:focus-visible {
+            outline: 2px solid #4a90e2 !important;
+            outline-offset: 2px;
+        }
+
+        /* Remove text decoration from links for a clean look */
+        a {
+            text-decoration: none;
+        }
     </style>
-   <style>
-      @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-      * {
-        -webkit-font-smoothing: antialiased;
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        margin: 0px;
-        height: 100%;
-      }
-      /* a blue color as a generic focus style */
-      button:focus-visible {
-        outline: 2px solid #4a90e2 !important;
-        outline: -webkit-focus-ring-color auto 5px !important;
-      }
-      a {
-        text-decoration: none;
-      }
-    </style> 
-  </head>
-  <body>
+</head>
+<body>
     <div id="app"></div>
     <script type="module" src="./src/index.js"></script>
-  </body>
+</body>
 </html>

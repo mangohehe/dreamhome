@@ -1,3 +1,5 @@
+/*navbar-header*/
+
 .navbar-header {
  display: flex;
  flex-direction: row;
@@ -6,6 +8,7 @@
  padding: 16px 32px;
  background-color: rgba(255, 255, 255, 1);
  box-shadow: 0px 2px 6px rgba(0.05, 0.1, 0.15, 0.15);
+ box-sizing: border-box; /* Ensures padding and borders are included within the width and height */
  width: 100%;
  overflow: visible;
 }

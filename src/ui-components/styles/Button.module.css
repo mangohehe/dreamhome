@@ -1,0 +1,32 @@
+/* Default button style */
+
+/* .header_button */
+.header_button {
+    background-color: #ffffff; /* white background */
+    color: #333; /* dark grey text for visibility */
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header_button:hover {
+    background-color: #bec0e7; /* light purple background on hover */
+}
+
+/* Button.module.css */
+.header_highlighted_button {
+    background-color: #5b55b1; /* Dark blue background */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.header_highlighted_button:hover {
+    background-color: #4742a8; /* Slightly darker shade for hover */
+    transform: scale(1.05); /* Slight scale to give feedback */
+}
