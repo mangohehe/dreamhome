@@ -8,40 +8,30 @@
   --heading-line-height-small: 40px;
 }
 
-.custom-hero-layout {
+.customHeroLayout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  padding: 0 20px;
+  padding: 0;
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
+  margin: 0 auto;
 }
 
-.custom-hero-layout .hero-content {
-  gap: 30px;
+.heroContent {
+  display: flex;
   flex-direction: column;
-  width: 50%;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
-  overflow: visible;
-  position: relative;
+  gap: 50px; /* Adjusted gap */
+  width: 100%; /* Use full width of the parent Flex */
   padding: 80px 50px 33px 80px;
   background-color: var(--bg-overlay-color);
 }
 
-.custom-hero-layout .hero-message {
-  gap: 0;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  padding: 0px;
-}
-
-.custom-hero-layout .hero-message .heading {
+.heading {
   font-family: var(--font-family);
   font-size: var(--heading-font-size-large);
   font-weight: 400;
@@ -51,28 +41,27 @@
   display: block;
 }
 
-.custom-hero-layout .hero-message .button {
+.button {
   margin-top: 20px;
   width: 100%;
   max-width: 300px;
 }
 
 @media (max-width: 768px) {
-  .custom-hero-layout {
+  .customHeroLayout {
       flex-direction: column;
   }
 
-  .custom-hero-layout .hero-content {
+  .heroContent {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    align-items: center; /* Ensure that all children are centered horizontally */
-    justify-content: center; /* Vertically center the contents */
+    align-items: center;
+    justify-content: center;
     padding: 80px 50px 33px 80px;
     background-color: rgba(0, 0, 0, 0.5); /* For better text readability */
   }
 
-  .custom-hero-layout .hero-message .heading {
+  .heading {
       font-size: var(--heading-font-size-small);
       line-height: var(--heading-line-height-small);
   }

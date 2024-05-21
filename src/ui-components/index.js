@@ -15,4 +15,6 @@ export { default as MarketingFooter } from "./MarketingFooter";
 export { default as NavBarHeader } from "./NavBarHeader";
 export { default as NewsCreateForm } from "./NewsCreateForm";
 export { default as SocialPostCollection } from "./SocialPostCollection";
-2
+export { default as YouTubePlayerWithThumbnail } from "./YouTubePlayerWithThumbnail";
+export { default as IntroductionSection } from "./IntroductionSection";
+export { default as IntroductionSection2 } from "./InroducetionSection2"

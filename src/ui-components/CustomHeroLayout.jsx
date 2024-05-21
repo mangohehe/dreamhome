@@ -1,19 +1,23 @@
 import * as React from "react";
 import { getOverrideProps } from "./utils";
 import { Button, Flex, Text } from "@aws-amplify/ui-react";
-import './styles/CustomHeroLayout.css'; // Import the CSS file
-import buttonStyles from './styles/Button.module.css'; // Import the CSS file
+import styles from './styles/CustomHeroLayout.module.css'; // Import the CSS module
+import buttonStyles from './styles/Button.module.css'; // Import the button styles
 
-export default function CustomHeroLayout(props) {
+export default function CustomHeroLayout({ width = "100%", ...props }) {
   const { overrides, ...rest } = props;
   return (
     <Flex
-      className="custom-hero-layout"
-      style={{ backgroundImage: `url('http://127.0.0.1:5500/public/imgs/dreamhome.jpeg')` }}
+      className={styles.customHeroLayout}
+      style={{ 
+        backgroundImage: `url('http://127.0.0.1:5500/public/imgs/dreamhome.jpeg')`, 
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: width || '100%', // Allow dynamic width with a fallback to 100%
+        height: '40vh' // Adjust height as needed
+      }}
       gap="0"
-      direction="row"
-      width="100%"
-      height="unset"
+      direction="column"
       justifyContent="center"
       alignItems="center"
       position="relative"
@@ -22,11 +26,10 @@ export default function CustomHeroLayout(props) {
       {...rest}
     >
       <Flex
-        className="hero-content"
-        gap="50px"  // Increased from 30px to provide more space between elements
+        className={styles.heroContent}
+        gap="50px"
         direction="column"
-        width="50%"
-        height="unset"
+        width="100%"
         justifyContent="center"
         alignItems="center"
         overflow="hidden"
@@ -35,7 +38,7 @@ export default function CustomHeroLayout(props) {
         {...getOverrideProps(overrides, "HeroContent")}
       >
         <Text
-          className="heading"
+          className={styles.heading}
           fontFamily="Inter"
           fontSize="35px"
           fontWeight="400"
@@ -48,14 +51,13 @@ export default function CustomHeroLayout(props) {
         />
         <Button
           className={buttonStyles.herolayout_button}
-          style={{ marginTop: '50px' }}  // Adds margin top directly inline for one-time adjustments
-          alignContent="center"  // Corrected from {alignContent} to "center"
+          style={{ marginTop: '50px' }}
+          alignContent="center"
           onClick={() => window.location.href = 'https://fe.d3a7f3vn13kcxk.amplifyapp.com/'}
         >
           GET FREE BUILD CONSULTATION
         </Button>
       </Flex>
-
     </Flex>
   );
 }

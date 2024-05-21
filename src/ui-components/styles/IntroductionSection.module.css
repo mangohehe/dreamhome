@@ -1,0 +1,77 @@
+.elementorSection {
+  width: 80%; /* Set the section to 80% width */
+  margin: 0 auto; /* Center align horizontally */
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center align vertically */
+  align-items: center; /* Center align horizontally */
+  height: 100%; /* Ensure it takes the full height of the parent container */
+}
+
+.elementorContainer {
+  width: 100%; /* Adjust the container width to 100% */
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.elementorColumn {
+  width: 100%;
+}
+
+.elementorWidgetWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.customHeading, .customSubheading, .customParagraph, .customHeading2, .customParagraph2 {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+}
+
+.customHeading {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+.customSubheading {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  margin: 20px 0;
+  background-color: #f0f4f8;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.customParagraph {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+.customHeading2 {
+  font-size: 22px;
+  font-weight: 400;
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+.customParagraph2 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+.customLink {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.customLink:hover {
+  text-decoration: underline;
+}

@@ -5,7 +5,7 @@ import { Button, Flex, Text } from "@aws-amplify/ui-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import './studioTheme.js';
-import './styles/NavBarHeader.css';
+import styles from './styles/NavBarHeader.module.css';
 import button_styles from './styles/Button.module.css';
 
 export default function NavBarHeader(props) {
@@ -29,7 +29,7 @@ export default function NavBarHeader(props) {
     <Flex
       gap="15px"
       direction="row"
-      width="100%"
+      width="80%"
       height="unset"
       justifyContent="space-between"
       alignItems="center"
@@ -38,7 +38,7 @@ export default function NavBarHeader(props) {
       boxShadow="0px 2px 6px rgba(0.05, 0.1, 0.15, 0.15)"
       padding="16px 32px"
       backgroundColor="rgba(255,255,255,1)"
-      className="navbar-header"
+      className={styles.navbarHeader}
       {...getOverrideProps(overrides, "NavBarHeader")}
       {...rest}
     >
@@ -52,7 +52,7 @@ export default function NavBarHeader(props) {
         shrink="0"
         position="relative"
         padding="0px"
-        className="navbar-logo-section"
+        className={styles.navbarLogoSection}
         {...getOverrideProps(overrides, "LogoSection")}
       >
         <LogoWithText
@@ -71,7 +71,7 @@ export default function NavBarHeader(props) {
       </Flex>
 
       <Flex
-        className="navbar-menu-section"
+        className={styles.navbarMenuSection}
         gap="32px"
         direction="row"
         alignItems="center"
@@ -108,6 +108,7 @@ export default function NavBarHeader(props) {
         shrink="0"
         position="relative"
         padding="0px"
+        className={styles.navbarContactSection}
         {...getOverrideProps(overrides, "ContactSection")}
       >
         <FontAwesomeIcon
@@ -143,12 +144,12 @@ export default function NavBarHeader(props) {
         icon={menuOpen ? faTimes : faBars}
         size="lg"
         color="rgba(13,26,38,1)"
-        className="navbar-menu-toggle"
+        className={styles.navbarMenuToggle}
         onClick={toggleMenu}
       />
       {menuOpen && (
         <Flex
-          className="navbar-dropdown-menu"
+          className={styles.navbarDropdownMenu}
           direction="column"
           alignItems="center"
           justifyContent="center"
@@ -201,8 +202,6 @@ export default function NavBarHeader(props) {
           />
         </Flex>
       )}
-
-
     </Flex>
   );
 }
