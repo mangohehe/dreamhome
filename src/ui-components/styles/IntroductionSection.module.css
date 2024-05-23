@@ -1,3 +1,13 @@
+:root {
+  --bg-overlay-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background overlay */
+  --text-color: rgba(230, 238, 254, 1); /* Light bluish text color */
+  --font-family: 'Inter', sans-serif; /* Common font family */
+  --heading-font-size-large: 35px;
+  --heading-font-size-small: 28px;
+  --heading-line-height-large: 50px;
+  --heading-line-height-small: 40px;
+}
+
 .elementorSection {
   width: 80%; /* Set the section to 80% width */
   margin: 0 auto; /* Center align horizontally */
@@ -74,4 +84,53 @@
 
 .customLink:hover {
   text-decoration: underline;
+}
+
+/* New button styles */
+.customButton {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1e73be;
+  background-color: transparent;
+  border: 2px solid #1e73be;
+  border-radius: 50px; /* Rounded corners */
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.customButton:hover {
+  background-color: #1e73be;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .elementorSection {
+    /* Your existing responsive styles */
+  }
+
+  .elementorContainer {
+    /* Your existing responsive styles */
+  }
+
+  .elementorColumn {
+    /* Your existing responsive styles */
+  }
+
+  .elementorWidgetWrap {
+    /* Your existing responsive styles */
+  }
+
+  .customHeading, .customSubheading, .customParagraph, .customHeading2, .customParagraph2 {
+    /* Your existing responsive styles */
+  }
+
+  .customButton {
+    width: 100%;
+    max-width: 300px; /* Ensure button does not stretch too much */
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 }

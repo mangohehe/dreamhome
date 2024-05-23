@@ -18,3 +18,6 @@ export { default as SocialPostCollection } from "./SocialPostCollection";
 export { default as YouTubePlayerWithThumbnail } from "./YouTubePlayerWithThumbnail";
 export { default as IntroductionSection } from "./IntroductionSection";
 export { default as IntroductionSection2 } from "./InroducetionSection2"
+export { default as ClientTestimonials } from "./ClientTestimonials"
+export { default as FreeQuote } from "./FreeQuote"
+export {default as FeaturedProjects } from "./FeaturedProjects"

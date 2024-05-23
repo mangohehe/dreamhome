@@ -51,7 +51,7 @@ const IntroductionSection2 = ({ width = '80%', height = 'auto' }) => {
               data-widget_type="button.default"
             >
               <div className={styles.elementorWidgetContainer}>
-                <a className={styles.elementorButton} href="#">
+                <a className={styles.customButton} href="#">
                   LEARN MORE ABOUT BAY BUILDERS
                 </a>
               </div>

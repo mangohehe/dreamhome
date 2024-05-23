@@ -4,8 +4,13 @@ import { Button, Flex, Text } from "@aws-amplify/ui-react";
 import styles from './styles/CustomHeroLayout.module.css'; // Import the CSS module
 import buttonStyles from './styles/Button.module.css'; // Import the button styles
 
-export default function CustomHeroLayout({ width = "100%", ...props }) {
+export default function CustomHeroLayout({ width = "100%", navigate, ...props }) {
   const { overrides, ...rest } = props;
+
+  const navigateToFreeQuote = () => {
+    navigate('/free-quote');
+  };
+
   return (
     <Flex
       className={styles.customHeroLayout}
@@ -14,7 +19,7 @@ export default function CustomHeroLayout({ width = "100%", ...props }) {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         width: width || '100%', // Allow dynamic width with a fallback to 100%
-        height: '40vh' // Adjust height as needed
+        height: '50vh' // Adjust height as needed
       }}
       gap="0"
       direction="column"
@@ -27,35 +32,37 @@ export default function CustomHeroLayout({ width = "100%", ...props }) {
     >
       <Flex
         className={styles.heroContent}
-        gap="50px"
+        gap="20px"
         direction="column"
-        width="100%"
+        width="80%"
+        maxWidth="500px" // Ensure a maximum width
         justifyContent="center"
         alignItems="center"
         overflow="hidden"
         position="relative"
-        padding="80px 50px 33px 80px"
+        padding="20px"
         {...getOverrideProps(overrides, "HeroContent")}
       >
         <Text
           className={styles.heading}
           fontFamily="Inter"
-          fontSize="35px"
+          fontSize="auto"
           fontWeight="400"
           color="rgba(230, 238, 254, 1)"
-          lineHeight="50px"
+          lineHeight="60px"
           textAlign="center"
-          display="block"
+          display="flex"
           {...getOverrideProps(overrides, "Heading")}
-          children="YOUR DREAM HOME &#xA; AWAITS YOU"
-        />
+        >
+          YOUR DREAM HOME <br /> AWAITS YOU
+        </Text>
         <Button
           className={buttonStyles.herolayout_button}
-          style={{ marginTop: '50px' }}
+          style={{ marginTop: '0px' }}
           alignContent="center"
-          onClick={() => window.location.href = 'https://fe.d3a7f3vn13kcxk.amplifyapp.com/'}
+          onClick={navigateToFreeQuote} // Navigate to Free Quote page
         >
-          GET FREE BUILD CONSULTATION
+          FREE QUOTE 
         </Button>
       </Flex>
     </Flex>
