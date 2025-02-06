@@ -20,3 +20,6 @@ amplifytools.xcconfig
 **.sample
 #amplify-do-not-edit-end
 /.parcel-cache
+/.parcel-cache
+package-lock.json
+src/.DS_Store

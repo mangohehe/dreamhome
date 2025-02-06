@@ -3,6 +3,7 @@ import { getOverrideProps } from "./utils";
 import { Button, Flex, Text } from "@aws-amplify/ui-react";
 import styles from './styles/CustomHeroLayout.module.css'; // Import the CSS module
 import buttonStyles from './styles/Button.module.css'; // Import the button styles
+import dreamhome from '../../public/imgs/dreamhome.jpeg';
 
 export default function CustomHeroLayout({ width = "100%", navigate, ...props }) {
   const { overrides, ...rest } = props;
@@ -14,12 +15,12 @@ export default function CustomHeroLayout({ width = "100%", navigate, ...props })
   return (
     <Flex
       className={styles.customHeroLayout}
-      style={{ 
-        backgroundImage: `url('http://127.0.0.1:5500/public/imgs/dreamhome.jpeg')`, 
+      style={{
+        backgroundImage: `url(${dreamhome})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        width: width || '100%', // Allow dynamic width with a fallback to 100%
-        height: '50vh' // Adjust height as needed
+        width: width || '100%',
+        height: '50vh'
       }}
       gap="0"
       direction="column"
