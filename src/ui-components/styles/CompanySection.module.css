@@ -1,0 +1,466 @@
+.sectionWrapper {
+  width: 100%;
+  background: #FFFFFF;
+  padding: 80px 24px 92px;
+  position: relative;
+}
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 44px;
+}
+
+.subBadge {
+  display: inline-block;
+  background: #FAF7F2;
+  border: 1px solid #DFD4C1;
+  color: #8E652E;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.mainTitle {
+  font-size: 36px;
+  font-weight: 800;
+  color: #14181F;
+  line-height: 1.25;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+}
+
+.desc {
+  font-size: 16px;
+  color: #525A65;
+  line-height: 1.68;
+}
+
+.desc b {
+  color: #14181F;
+  font-weight: 700;
+}
+
+/* 1. 4 Big Metric Cards */
+.metricsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 44px;
+}
+
+.metricCard {
+  background: #FAF9F6;
+  border: 1px solid #E6E0D5;
+  border-radius: 16px;
+  padding: 24px 22px;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.metricCard:hover {
+  background: #FFFFFF;
+  border-color: #C49B5E;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(20, 24, 31, 0.06);
+}
+
+.metricNum {
+  font-size: 32px;
+  font-weight: 900;
+  color: #8E652E;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin-bottom: 6px;
+}
+
+.metricLabel {
+  font-size: 16px;
+  font-weight: 800;
+  color: #14181F;
+  margin-bottom: 4px;
+}
+
+.metricSub {
+  font-size: 13px;
+  color: #616975;
+}
+
+/* 2. Visual 3-Mode Comparison Diagram */
+.modesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.22fr;
+  gap: 20px;
+  margin-bottom: 56px;
+  align-items: stretch;
+}
+
+.modeCard {
+  border-radius: 20px;
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+}
+
+.modeCardOther {
+  background: #FAF9F6;
+  border: 1px solid #E6E0D6;
+}
+
+.modeCardMsz {
+  background: #FFFFFF;
+  border: 2px solid #8E652E;
+  box-shadow: 0 18px 42px rgba(142, 101, 46, 0.12);
+  position: relative;
+}
+
+.modeTop {
+  margin-bottom: 18px;
+}
+
+.modeBadge {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 800;
+  padding: 4px 11px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.modeCardOther .modeBadge {
+  background: #EFECE6;
+  color: #68707C;
+}
+
+.modeCardMsz .modeBadge {
+  background: #14181F;
+  color: #F5D7A1;
+}
+
+.modeTitle {
+  font-size: 22px;
+  font-weight: 800;
+  color: #14181F;
+  margin-bottom: 4px;
+}
+
+.modeSubtitle {
+  font-size: 13.5px;
+  color: #5E6672;
+  font-weight: 600;
+}
+
+/* Visual Chain Flow Bar */
+.chainBar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.modeCardOther .chainBar {
+  background: #F1EEE8;
+  color: #5A626E;
+  border: 1px dashed #D5CEC2;
+}
+
+.modeCardMsz .chainBar {
+  background: #FAF5EC;
+  color: #8E652E;
+  border: 1px solid #DFCFAF;
+}
+
+.chainNode {
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.chainArrow {
+  opacity: 0.65;
+  font-weight: 800;
+}
+
+.modePoints {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modePointItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13.8px;
+  line-height: 1.5;
+  color: #4A525E;
+}
+
+.modePointItem strong {
+  color: #14181F;
+  font-weight: 800;
+}
+
+.iconCross {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #EAE6DF;
+  color: #7B828E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.iconCheck {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #8E652E;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* 3. Visual Craft Bento Grid with Real Photos */
+.tradesBlock {
+  margin-bottom: 56px;
+}
+
+.subHeader {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.stepTag {
+  display: inline-block;
+  color: #8E652E;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.subHeader h3 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #14181F;
+}
+
+.craftBentoGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.craftCard {
+  background: #FAF9F6;
+  border: 1px solid #E6E0D5;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.craftCard:hover {
+  transform: translateY(-4px);
+  background: #FFFFFF;
+  border-color: #C49B5E;
+  box-shadow: 0 16px 34px rgba(20, 24, 31, 0.07);
+}
+
+.craftCardLarge {
+  grid-column: span 3;
+}
+
+.craftCardRegular {
+  grid-column: span 2;
+}
+
+.craftImgWrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #EAE5DC;
+}
+
+.craftCardRegular .craftImgWrap {
+  height: 190px;
+}
+
+.craftImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.craftCard:hover .craftImg {
+  transform: scale(1.04);
+}
+
+.craftOverlayTag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(20, 24, 31, 0.82);
+  backdrop-filter: blur(6px);
+  color: #FFFFFF;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.craftBody {
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.craftTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: #14181F;
+  margin-bottom: 6px;
+}
+
+.craftDesc {
+  font-size: 13.5px;
+  color: #555E6B;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+.craftChips {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.craftChip {
+  background: #FFFFFF;
+  border: 1px solid #E2DBD0;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #14181F;
+}
+
+/* 4. Compact 6-Step Pipeline Block */
+.pipelineBlock {
+  background: #FAF9F6;
+  border: 1px solid #E5DFD5;
+  border-radius: 20px;
+  padding: 36px 30px;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.stepItem {
+  background: #FFFFFF;
+  border: 1px solid #E6E0D5;
+  border-radius: 14px;
+  padding: 18px 14px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.stepItem:hover {
+  border-color: #C49B5E;
+  transform: translateY(-2px);
+}
+
+.stepNum {
+  font-size: 20px;
+  font-weight: 900;
+  color: #8E652E;
+  margin-bottom: 6px;
+}
+
+.stepTitle {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #14181F;
+  margin-bottom: 4px;
+}
+
+.stepDesc {
+  font-size: 12px;
+  color: #616975;
+  line-height: 1.45;
+}
+
+@media (max-width: 1024px) {
+  .metricsRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .modesGrid {
+    grid-template-columns: 1fr;
+  }
+  .craftCardLarge,
+  .craftCardRegular {
+    grid-column: span 3;
+  }
+  .stepsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionWrapper {
+    padding: 56px 16px;
+  }
+  .mainTitle {
+    font-size: 26px;
+  }
+  .metricsRow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .craftBentoGrid {
+    grid-template-columns: 1fr;
+  }
+  .craftCardLarge,
+  .craftCardRegular {
+    grid-column: span 1;
+  }
+  .stepsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

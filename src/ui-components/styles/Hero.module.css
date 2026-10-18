@@ -1,0 +1,357 @@
+/* Minimalist White Architectural Studio Hero */
+.heroSection {
+  width: 100%;
+  background: #FFFFFF;
+  padding: 28px 24px 48px;
+  border-bottom: 1px solid #EAE5DC;
+}
+
+.heroInner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.heroCard {
+  background: #FFFFFF;
+  border: 1px solid #E6E1D8;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(20, 24, 31, 0.05);
+  overflow: hidden;
+}
+
+/* Main Split Grid - Wider Left Header Column */
+.heroMainGrid {
+  display: grid;
+  grid-template-columns: 1.06fr 1.14fr;
+  gap: 36px;
+  padding: 42px 44px 38px;
+  align-items: center;
+}
+
+/* Left Column */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.brandBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 15px;
+  background: #FAF7F2;
+  border: 1.5px solid #DFD4C1;
+  border-radius: 999px;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+.brandName {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #14181F;
+}
+
+.brandDivider {
+  color: #C7B9A3;
+}
+
+.brandSub {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #8E652E;
+}
+
+.heroTitle {
+  font-size: 38px;
+  line-height: 1.22;
+  font-weight: 800;
+  color: #14181F;
+  letter-spacing: -0.6px;
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.heroSubtitle {
+  font-size: 16px;
+  line-height: 1.68;
+  color: #4D5560;
+  margin-bottom: 28px;
+}
+
+.heroSubtitle strong {
+  color: #14181F;
+  font-weight: 700;
+}
+
+/* CTA Buttons */
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 28px;
+  background: #14181F;
+  color: #FFFFFF;
+  font-size: 15.5px;
+  font-weight: 700;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(20, 24, 31, 0.14);
+  transition: all 0.25s ease;
+}
+
+.primaryBtn:hover {
+  background: #8E652E;
+  transform: translateY(-2px);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 24px;
+  background: #FFFFFF;
+  color: #14181F;
+  border: 1.5px solid #DCD4C7;
+  font-size: 15.5px;
+  font-weight: 700;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.secondaryBtn:hover {
+  border-color: #14181F;
+  background: #F9F8F5;
+  transform: translateY(-2px);
+}
+
+/* Right Column: Clean Dynamic Viewport */
+.rightColumn {
+  width: 100%;
+}
+
+.viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: ew-resize;
+  user-select: none;
+  box-shadow: 0 16px 40px rgba(20, 24, 31, 0.1);
+  border: 1px solid #E5DFD5;
+}
+
+.completedLayer,
+.siteLayer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.stageImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Prominent MSZ Construction Plate on Visual */
+.imageBrandPlate {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 6;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 16px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(20, 24, 31, 0.12);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.plateDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8E652E;
+}
+
+.plateTitle {
+  font-size: 13.5px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #14181F;
+}
+
+.plateCity {
+  font-size: 11px;
+  font-weight: 700;
+  color: #8E652E;
+  padding-left: 8px;
+  border-left: 1px solid #DDD6C9;
+}
+
+/* Top-Right Perspective Indicator */
+.perspectivePill {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 6;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(20, 24, 31, 0.1);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #14181F;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.pillArrow {
+  color: #8E652E;
+  font-weight: 900;
+}
+
+/* Smooth Scan Line */
+.scanLineWrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2.5px;
+  background: #FFFFFF;
+  box-shadow: 0 0 16px rgba(20, 24, 31, 0.35);
+  z-index: 8;
+  transform: translateX(-50%);
+}
+
+.scanHandle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #14181F;
+  border: 2px solid #8E652E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+}
+
+/* Bottom 5-Pillar Core Highlights Bar */
+.pillarsBar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background: #FAF9F6;
+  border-top: 1px solid #EAE4DA;
+}
+
+.pillarItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 24px 22px;
+  border-right: 1px solid #EAE4DA;
+  transition: background 0.2s ease;
+}
+
+.pillarItem:last-child {
+  border-right: none;
+}
+
+.pillarItem:hover {
+  background: #F4EFE6;
+}
+
+.pillarIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  border: 1px solid #E4DDD0;
+  color: #8E652E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pillarText {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.pillarTitle {
+  font-size: 15px;
+  font-weight: 800;
+  color: #14181F;
+  line-height: 1.3;
+}
+
+.pillarSub {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #626A75;
+  line-height: 1.45;
+}
+
+/* Responsive */
+@media (max-width: 1180px) {
+  .heroMainGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 32px 28px;
+  }
+
+  .pillarsBar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pillarItem {
+    border-bottom: 1px solid #EAE4DA;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroSection {
+    padding: 16px 12px 32px;
+  }
+
+  .heroMainGrid {
+    padding: 24px 18px;
+  }
+
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .pillarsBar {
+    grid-template-columns: 1fr;
+  }
+
+  .pillarItem {
+    border-right: none;
+  }
+}
