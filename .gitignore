@@ -21,5 +21,7 @@ amplifytools.xcconfig
 #amplify-do-not-edit-end
 /.parcel-cache
 /.parcel-cache
-package-lock.json
 src/.DS_Store
+
+# Local package-download cache used by the hosting build
+.npm/

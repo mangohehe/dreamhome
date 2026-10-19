@@ -88,3 +88,39 @@ If you'd like to contribute to this project, please open an issue or submit a pu
 ```
 
 
+
+
+## Production publishing: mszbayarea.com
+
+This website is a static React build hosted with AWS Amplify Hosting. The hosting
+configuration is in `amplify.yml`; it deliberately defines frontend build steps
+only. The historical `amplify/backend/` resources are not provisioned by this
+publishing setup.
+
+- GitHub source: `mangohehe/dreamhome`, production branch `main`.
+- Build: Node.js 22, `npm ci`, `npm run build`, `npm run check:build`.
+- Published directory: `build/`; images are bundled from this repository.
+- Publishing needs no separate S3 bucket, database, authentication or server.
+- The existing consultation form uses its configured external form provider.
+  Hosting does not provision or validate that external mailbox service.
+- The two local PDF previews are not release inputs.
+
+After the Amplify GitHub connection is configured, pushing to `main` triggers
+an automatic build and deployment. Use the Amplify deployment status to verify
+that a commit reached production. For local release checks, use:
+
+```sh
+npm ci
+npm run build
+npm run check:build
+```
+
+### Cost target
+
+The goal is below $1/month at low traffic, excluding domain registration/renewal.
+Using standard pay-as-you-go rates (without relying on free-tier eligibility),
+20 builds/month at 2 minutes each are about $0.40; serving 0.6 GB/month is about
+$0.09. Static storage is a small additional charge. Actual costs depend on
+build frequency, stored deployments and traffic; $1 is a target, not a hard cap.
+No paid WAF, SSR, backend provisioning or additional DNS hosted zone is required.
+Pricing reference: https://aws.amazon.com/amplify/pricing/
