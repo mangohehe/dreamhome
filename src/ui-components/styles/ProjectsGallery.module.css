@@ -440,11 +440,40 @@
 
 @media (max-width: 640px) {
   .sectionWrapper {
-    padding: 48px 16px;
+    padding: 48px 14px;
+  }
+
+  .mainTitle {
+    font-size: 26px;
   }
 
   .compareShowcaseCard {
-    padding: 18px;
+    padding: 16px 14px;
+  }
+
+  .compareTitle {
+    font-size: 18px;
+  }
+
+  .beforePill,
+  .afterPill {
+    font-size: 10.5px;
+    padding: 4px 9px;
+    max-width: calc(100% - 20px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .beforePill {
+    top: 8px;
+    left: 8px;
+  }
+
+  .afterPill {
+    top: auto;
+    bottom: 8px;
+    right: 8px;
   }
 
   .galleryGrid {

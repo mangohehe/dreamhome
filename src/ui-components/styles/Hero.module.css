@@ -34,6 +34,7 @@
   flex-direction: column;
   align-items: flex-start;
   min-width: 0;
+  max-width: 100%;
 }
 
 .brandBadge {
@@ -46,6 +47,7 @@
   border-radius: 999px;
   margin-bottom: 20px;
   white-space: nowrap;
+  max-width: 100%;
 }
 
 .brandName {
@@ -93,11 +95,13 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 14px;
+  width: 100%;
 }
 
 .primaryBtn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   padding: 15px 28px;
   background: #14181F;
@@ -117,6 +121,7 @@
 .secondaryBtn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: 15px 24px;
   background: #FFFFFF;
   color: #14181F;
@@ -136,6 +141,7 @@
 /* Right Column: Clean Dynamic Viewport */
 .rightColumn {
   width: 100%;
+  min-width: 0;
 }
 
 .viewport {
@@ -166,55 +172,16 @@
   display: block;
 }
 
-/* Prominent MSZ Construction Plate on Visual */
-.imageBrandPlate {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  z-index: 6;
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  padding: 9px 16px;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(20, 24, 31, 0.12);
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-.plateDot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #8E652E;
-}
-
-.plateTitle {
-  font-size: 13.5px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  color: #14181F;
-}
-
-.plateCity {
-  font-size: 11px;
-  font-weight: 700;
-  color: #8E652E;
-  padding-left: 8px;
-  border-left: 1px solid #DDD6C9;
-}
-
 /* Top-Right Perspective Indicator */
 .perspectivePill {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 14px;
+  right: 14px;
   z-index: 6;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 14px;
+  padding: 7px 13px;
   background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(20, 24, 31, 0.1);
@@ -317,7 +284,7 @@
   line-height: 1.45;
 }
 
-/* Responsive */
+/* Responsive Tablet & Mobile */
 @media (max-width: 1180px) {
   .heroMainGrid {
     grid-template-columns: 1fr;
@@ -334,17 +301,84 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .heroSection {
-    padding: 16px 12px 32px;
+    padding: 14px 12px 28px;
+  }
+
+  .heroCard {
+    border-radius: 18px;
   }
 
   .heroMainGrid {
-    padding: 24px 18px;
+    padding: 20px 16px 22px;
+    gap: 20px;
+  }
+
+  /* Allow the brand badge to wrap cleanly onto 2 lines on mobile so nothing is cut off */
+  .brandBadge {
+    white-space: normal;
+    flex-wrap: wrap;
+    border-radius: 12px;
+    padding: 8px 12px;
+    gap: 3px 8px;
+    margin-bottom: 14px;
+    line-height: 1.35;
+  }
+
+  .brandName {
+    font-size: 12px;
+  }
+
+  .brandDivider {
+    display: none;
+  }
+
+  .brandSub {
+    width: 100%;
+    font-size: 11px;
+    line-height: 1.35;
   }
 
   .heroTitle {
-    font-size: 32px;
+    font-size: 26px;
+    line-height: 1.24;
+    letter-spacing: -0.3px;
+    margin-bottom: 12px;
+    word-break: break-word;
+  }
+
+  .heroSubtitle {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .ctaRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    padding: 13px 18px;
+    font-size: 14.5px;
+  }
+
+  .perspectivePill {
+    top: 8px;
+    right: 8px;
+    padding: 5px 10px;
+    font-size: 10.5px;
+    gap: 5px;
+    max-width: calc(100% - 16px);
+  }
+
+  .scanHandle {
+    width: 32px;
+    height: 32px;
   }
 
   .pillarsBar {
@@ -352,6 +386,7 @@
   }
 
   .pillarItem {
+    padding: 16px;
     border-right: none;
   }
 }

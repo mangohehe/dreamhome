@@ -41,10 +41,15 @@ export default function Navbar() {
         <div className={styles.topBarContent}>
           <div className={styles.badgePill}>
             <span className={styles.pulseDot}></span>
-            <span>
+            <span className={styles.desktopBadgeText}>
               {lang === 'en'
-                ? 'California Licensed Class-B General Contractor · 20+ Years Bay Area Experience · Factory-Direct Value'
+                ? 'California Licensed Class-B General Contractor · 20+ Years Bay Area Experience · Fair & Transparent Pricing'
                 : '加州正规总承包商 (General Contractor B 牌) · 20余年湾区建房经验 · 价格透明公道'}
+            </span>
+            <span className={styles.mobileBadgeText}>
+              {lang === 'en'
+                ? 'CA Licensed Class-B · 20+ Yrs Bay Area Experts'
+                : '加州正规 B 牌总包 · 深耕湾区 20 余年'}
             </span>
           </div>
           <div className={styles.topRight}>
@@ -65,7 +70,7 @@ export default function Navbar() {
         <div className={styles.navContainer}>
           <a href="#home" className={styles.brand}>
             <div className={styles.brandLogo}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                 <polyline points="9 22 9 12 15 12 15 22"/>
               </svg>
@@ -74,7 +79,7 @@ export default function Navbar() {
               <span className={styles.brandTitle}>MSZ CONSTRUCTION</span>
               <span className={styles.brandSubtitle}>
                 {lang === 'en'
-                  ? 'BAY AREA DESIGN · FACTORY · BUILD'
+                  ? '20+ YRS BAY AREA DESIGN & BUILD'
                   : '深耕湾区二十余年 · 一站式精工建房'}
               </span>
             </div>
@@ -131,6 +136,16 @@ export default function Navbar() {
               </svg>
             </button>
           </div>
+        </div>
+
+        {/* Always-Visible Mobile Quick Action Bar (Phone + Free Estimate on iPhone) */}
+        <div className={styles.mobileQuickBar}>
+          <a href="tel:6504666666" className={styles.mobileQuickPhone}>
+            📞 650-466-6666
+          </a>
+          <a href="#contact" className={styles.mobileQuickEstimate}>
+            {lang === 'en' ? '📅 Free On-Site Estimate' : '📅 预约免费现场勘测'}
+          </a>
         </div>
 
         {/* Mobile Dropdown */}

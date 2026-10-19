@@ -1,4 +1,3 @@
-
 .header {
   position: sticky;
   top: 0;
@@ -6,7 +5,7 @@
   width: 100%;
   z-index: 1000;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid #EAE5DC;
@@ -33,14 +32,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
 }
 
 .badgePill {
   display: flex;
   align-items: center;
   gap: 8px;
-  letter-spacing: 0.3px;
-  white-space: nowrap;
+  letter-spacing: 0.2px;
+  min-width: 0;
+}
+
+.desktopBadgeText {
+  display: inline;
+}
+
+.mobileBadgeText {
+  display: none;
 }
 
 .pulseDot {
@@ -56,8 +64,8 @@
 .topRight {
   display: flex;
   align-items: center;
-  gap: 20px;
-  white-space: nowrap;
+  gap: 18px;
+  flex-shrink: 0;
 }
 
 .serviceCities {
@@ -66,7 +74,7 @@
 
 .topPhone {
   color: #8E652E;
-  font-weight: 700;
+  font-weight: 800;
   transition: color 0.2s;
   white-space: nowrap;
 }
@@ -86,15 +94,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 16px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 11px;
   text-decoration: none;
-  flex-shrink: 0;
+  min-width: 0;
 }
 
 .brandLogo {
@@ -113,22 +121,24 @@
 .brandText {
   display: flex;
   flex-direction: column;
-  white-space: nowrap;
+  min-width: 0;
 }
 
 .brandTitle {
   font-size: 17.5px;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   color: #1A1F26;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .brandSubtitle {
   font-size: 11px;
   color: #8C7A65;
-  letter-spacing: 0.5px;
-  font-weight: 600;
+  letter-spacing: 0.4px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .navLinks {
@@ -218,16 +228,17 @@
 .langSwitchBtn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   background: #FAF8F4;
   border: 1.5px solid #DED5C6;
   border-radius: 999px;
-  padding: 4px 6px;
+  padding: 3px 5px;
   cursor: pointer;
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 800;
   color: #4A525D;
   transition: all 0.2s ease;
+  flex-shrink: 0;
 }
 
 .langSwitchBtn:hover {
@@ -236,7 +247,7 @@
 }
 
 .langOption {
-  padding: 4px 10px;
+  padding: 4px 9px;
   border-radius: 999px;
   transition: all 0.2s ease;
   line-height: 1.1;
@@ -249,41 +260,47 @@
 
 .mobileToggle {
   display: none;
-  background: transparent;
-  border: none;
+  background: #FAF8F4;
+  border: 1px solid #E2DAD0;
+  border-radius: 8px;
   cursor: pointer;
   color: #1A1F26;
   padding: 6px;
+  flex-shrink: 0;
+}
+
+/* Always-visible quick action bar on mobile screens */
+.mobileQuickBar {
+  display: none;
 }
 
 .mobileDropdown {
   display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1120px) {
   .navLinks {
     display: none;
-  }
-  .phoneButton {
-    display: none;
-  }
-  .mobileToggle {
-    display: block;
   }
   .serviceCities {
     display: none;
   }
+  .mobileToggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
   .mobileDropdown {
     display: flex;
     flex-direction: column;
-    padding: 16px 24px 24px;
+    padding: 14px 20px 22px;
     background: #FFFFFF;
     border-top: 1px solid #EAE3D8;
-    gap: 12px;
+    gap: 10px;
   }
   .mobileNavLink {
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 15.5px;
+    font-weight: 700;
     color: #1A1F26;
     padding: 10px 0;
     border-bottom: 1px solid #F5F0E8;
@@ -292,7 +309,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 12px;
+    margin-top: 10px;
   }
   .mobilePhoneBtn {
     text-align: center;
@@ -309,5 +326,113 @@
     color: #FFF;
     font-weight: 700;
     border-radius: 8px;
+  }
+}
+
+/* Mobile Phone Screens (e.g. iPhone 15: 390px - 430px) */
+@media (max-width: 768px) {
+  .topBar {
+    padding: 5px 0;
+    font-size: 11px;
+  }
+
+  .topBarContent {
+    padding: 0 12px;
+    gap: 6px;
+  }
+
+  .desktopBadgeText {
+    display: none;
+  }
+
+  .mobileBadgeText {
+    display: inline;
+    font-weight: 700;
+    color: #14181F;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .topPhone {
+    font-size: 11.5px;
+    font-weight: 800;
+  }
+
+  .navContainer {
+    padding: 9px 12px;
+    gap: 8px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brandLogo {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+  }
+
+  .brandTitle {
+    font-size: 14.5px;
+    letter-spacing: 0.4px;
+  }
+
+  .brandSubtitle {
+    font-size: 10px;
+    letter-spacing: 0.2px;
+  }
+
+  /* Hide desktop CTA/Phone buttons in top row and show them in full-width mobileQuickBar below */
+  .phoneButton,
+  .ctaButton {
+    display: none;
+  }
+
+  .langSwitchBtn {
+    padding: 2px 4px;
+    font-size: 11px;
+  }
+
+  .langOption {
+    padding: 3px 7px;
+  }
+
+  .mobileQuickBar {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 8px;
+    padding: 6px 12px 9px;
+    background: #FFFFFF;
+    border-top: 1px solid #F2EDE4;
+  }
+
+  .mobileQuickPhone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: #FAF6EE;
+    border: 1px solid #DEC9A4;
+    color: #14181F;
+    font-size: 12.5px;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .mobileQuickEstimate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #A87D43 0%, #8E652E 100%);
+    color: #FFFFFF;
+    font-size: 12.5px;
+    font-weight: 800;
+    white-space: nowrap;
+    box-shadow: 0 3px 10px rgba(142, 101, 46, 0.22);
   }
 }

@@ -444,14 +444,32 @@
 
 @media (max-width: 640px) {
   .sectionWrapper {
-    padding: 56px 16px;
+    padding: 48px 16px;
   }
   .mainTitle {
-    font-size: 26px;
+    font-size: 24px;
+  }
+  .subTitle {
+    font-size: 14.5px;
   }
   .metricsRow {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 10px;
+  }
+  .metricCard {
+    padding: 16px 12px;
+  }
+  .metricNum {
+    font-size: 22px;
+  }
+  .metricLabel {
+    font-size: 14px;
+  }
+  .metricSub {
+    font-size: 11.5px;
+  }
+  .modeCard {
+    padding: 22px 18px;
   }
   .craftBentoGrid {
     grid-template-columns: 1fr;
@@ -462,5 +480,6 @@
   }
   .stepsGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 }
