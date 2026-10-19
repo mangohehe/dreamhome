@@ -5,8 +5,8 @@
   "source": "./index.html",
   "sourceMap": true,
   "scripts": {
-    "build": "parcel build --dist-dir build --public-url / --no-scope-hoist --no-cache --no-source-maps",
-    "dev": "parcel --no-cache",
+    "build": "parcel build index.html --dist-dir build --public-url / --no-scope-hoist --no-cache --no-source-maps",
+    "dev": "parcel index.html --no-cache",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "check:build": "node scripts/check-static-build.mjs",
